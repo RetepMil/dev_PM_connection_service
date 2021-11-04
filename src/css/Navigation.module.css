@@ -1,0 +1,115 @@
+.navigation_container {
+  width: 1920px;
+  height: 65px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  position: absolute;
+
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #4d4d4d;
+}
+
+.login_container {
+  /* Login Container 9 */
+  position: absolute;
+  width: 412px;
+  height: 65px;
+  left: 0px;
+  top: 0px;
+
+  background: #e3e3e3;
+}
+
+.login_btn {
+  /* Login Button 9 */
+  position: absolute;
+  width: 196px;
+  height: 41px;
+  left: calc(50% - 196px / 2);
+  top: 12px;
+
+  border: 1px solid #858585;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.login_btn:hover {
+  cursor: pointer;
+}
+
+.navigation_my_page_btn {
+  /* My page button */
+
+  position: absolute;
+  width: 1508px;
+  height: 65px;
+  left: 412px;
+  top: 0px;
+
+  background: #98c7ff;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navigation_find_project_btn {
+  /* Find Project button */
+
+  position: absolute;
+  width: 1280px;
+  height: 65px;
+  left: 640px;
+  top: 0px;
+
+  background: #4fa0ff;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navigation_find_engineer_btn {
+  /* Find Engineer button */
+
+  position: absolute;
+  width: 1048px;
+  height: 65px;
+  left: 872px;
+  top: 0px;
+
+  background: #097aff;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+span.my_page {
+  position: absolute;
+  width: 160px;
+  height: 23px;
+  left: 75px;
+  top: 22px;
+  cursor: pointer;
+}
+
+span.find_project {
+  position: absolute;
+  width: 160px;
+  height: 23px;
+  left: 64px;
+  top: 22px;
+  cursor: pointer;
+}
+
+span.find_engineer {
+  position: absolute;
+  width: 160px;
+  height: 23px;
+  left: 70px;
+  top: 22px;
+  cursor: pointer;
+}
+
+span:hover {
+  cursor: pointer;
+}
