@@ -1,0 +1,94 @@
+div.main_container {
+  position: absolute;
+
+  width: 1920px;
+  height: 1015px;
+  margin-top: 65px;
+  padding: 0px;
+  border: 0px;
+
+  background-color: #ffdede;
+}
+
+div.puzzle_rectangle {
+  position: absolute;
+  width: 744px;
+  height: 684px;
+  left: 929px;
+  top: 376px;
+
+  background: #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(16.34deg);
+}
+
+div.top_circle {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 1238px;
+  top: 270px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.right_circle {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 1508px;
+  bottom: 33px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.left_circle {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 708px;
+  top: 498px;
+
+  border-radius: 50%;
+
+  background: rgba(2, 117, 252, 0.6);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  position: absolute;
+  width: 1089px;
+  height: 144px;
+  left: 16px;
+  top: 596px;
+
+  font-family: "Libre Barcode 39 Extended Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 144px;
+
+  color: #ffffff;
+}
+
+.subtitle {
+  position: absolute;
+  width: 733px;
+  height: 148px;
+  left: 31px;
+  top: 762px;
+
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+
+  color: #111111;
+}
