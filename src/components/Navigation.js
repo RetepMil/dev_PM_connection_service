@@ -16,9 +16,11 @@ const Navigation = () => {
       <div className={styles.navigation_my_page_btn}>
         <span className={styles.my_page}>my page</span>
       </div>
+      <div className={styles.divider1}></div>
       <div className={styles.navigation_find_project_btn}>
         <span className={styles.find_project}>find project</span>
       </div>
+      <div className={styles.divider2}></div>
       <div className={styles.navigation_find_engineer_btn}>
         <span className={styles.find_engineer}>find engineer</span>
       </div>

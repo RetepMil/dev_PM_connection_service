@@ -1,4 +1,6 @@
 .navigation_container {
+  position: absolute;
+
   width: 1920px;
   height: 65px;
   box-sizing: border-box;
@@ -24,7 +26,7 @@
   left: 0px;
   top: 0px;
 
-  background: #e3e3e3;
+  background: #ffdede;
 }
 
 .login_btn {
@@ -35,6 +37,7 @@
   left: calc(50% - 196px / 2);
   top: 12px;
 
+  background: #ffdede;
   border: 1px solid #858585;
   box-sizing: border-box;
   border-radius: 50px;
@@ -53,8 +56,7 @@
   left: 412px;
   top: 0px;
 
-  background: #98c7ff;
-  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #e3e3e3;
 }
 
 .navigation_find_project_btn {
@@ -66,8 +68,7 @@
   left: 640px;
   top: 0px;
 
-  background: #4fa0ff;
-  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #e3e3e3;
 }
 
 .navigation_find_engineer_btn {
@@ -79,8 +80,29 @@
   left: 872px;
   top: 0px;
 
-  background: #097aff;
-  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #e3e3e3;
+}
+
+.divider1 {
+  position: absolute;
+  height: 35px;
+  left: 621px;
+  top: 15px;
+
+  border-left: 1px solid #4d4d4d;
+
+  z-index: 10;
+}
+
+.divider2 {
+  position: absolute;
+  height: 35px;
+  left: 869px;
+  top: 15px;
+
+  border-left: 1px solid #4d4d4d;
+
+  z-index: 10;
 }
 
 span.my_page {
@@ -112,4 +134,10 @@ span.find_engineer {
 
 span:hover {
   cursor: pointer;
+}
+
+.divider#divider1 {
+}
+
+.divider#divider2 {
 }
