@@ -1,16 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "./Main";
+import Navigation from "./Navigation";
+import FindProject from "./FindProject";
+import FindEngineer from "./FindEngineer";
 
 const AppRouter = () => {
   return (
     <>
       <Router>
+        <Navigation />
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
-          <Route exact path="/MyPage"></Route>
-          <Route exact path="/FindProject"></Route>
-          <Route exact path="/FindEngineer"></Route>
+          <Route exact path="/mypage"></Route>
+          <Route exact path="/findproject" element={<FindProject />}></Route>
+          <Route exact path="/findengineer" element={<FindEngineer />}></Route>
         </Routes>
       </Router>
     </>

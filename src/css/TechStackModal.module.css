@@ -1,0 +1,65 @@
+.modal_container {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  overflow: hidden;
+  display: flex;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+.modal_container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tech_stack_title {
+  position: absolute;
+  width: 126px;
+  height: 30px;
+  left: 452px;
+  top: 44px;
+
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height */
+
+  color: #4d4d4d;
+}
+
+.stack_container {
+  margin-top: 13%;
+  display: inline-block;
+  width: 33.33%;
+  height: 75%;
+
+  border-right: 1px solid #000000;
+}
+
+.stack_container:last-child {
+  border: none;
+}
+
+.stack_type {
+  position: absolute;
+  width: 116px;
+  height: 30px;
+
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height */
+
+  color: #858585;
+}

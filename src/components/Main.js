@@ -7,7 +7,7 @@ const Main = () => {
       <div className={styles.top_circle} />
       <div className={styles.right_circle} />
       <div className={styles.left_circle} />
-      <div className={styles.logo}>project </div>
+      <div className={styles.logo}>project&nbsp</div>
       <div className={styles.subtitle}>
         Realize your idea. <br />
         We make your imagination a reality.

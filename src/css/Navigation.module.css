@@ -126,12 +126,6 @@ span.find_engineer {
   cursor: pointer;
 }
 
-span:hover {
+span.navigation_container:hover {
   cursor: pointer;
-}
-
-.divider#divider1 {
-}
-
-.divider#divider2 {
 }
