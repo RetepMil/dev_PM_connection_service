@@ -1,4 +1,30 @@
 import styles from "../css/TechStackModal.module.css";
+import StackItems from "./StackItem";
+
+let developStackNames = [
+  // later receive data from backend server
+  "JavaScript",
+  "React",
+  "NGINX",
+  "Ruby",
+  "Redis",
+  "Redux",
+  "nodeJS",
+];
+
+let designStackNames = [
+  "Illustrator",
+  "zeplin",
+  "Rhino",
+  "AdobeXD",
+  "photoshop",
+  "Figma",
+  "AfterEffects",
+  "Sketch",
+  "photo.io",
+];
+
+let managerStackNames = ["App Service", "Web Service"];
 
 const TechStackModal = () => {
   return (
@@ -11,6 +37,7 @@ const TechStackModal = () => {
         >
           developer
         </div>
+        <StackItems itemNames={developStackNames} />
       </div>
       <div className={styles.stack_container}>
         <div
@@ -19,6 +46,7 @@ const TechStackModal = () => {
         >
           designer
         </div>
+        <StackItems itemNames={designStackNames} />
       </div>
       <div className={styles.stack_container}>
         <div
@@ -27,6 +55,7 @@ const TechStackModal = () => {
         >
           manager
         </div>
+        <StackItems itemNames={managerStackNames} />
       </div>
     </div>
   );

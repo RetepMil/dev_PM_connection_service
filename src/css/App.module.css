@@ -7,6 +7,9 @@
 }
 
 .app_container {
+  left: 50%;
+  transform: translate(-50%, 0);
+
   width: 1920px;
   height: 1080px;
   margin: 0px;

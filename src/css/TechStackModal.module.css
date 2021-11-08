@@ -38,9 +38,13 @@
 
 .stack_container {
   margin-top: 13%;
-  display: inline-block;
+  padding: 15px;
   width: 33.33%;
   height: 75%;
+
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 
   border-right: 1px solid #000000;
 }
@@ -62,4 +66,8 @@
   /* identical to box height */
 
   color: #858585;
+}
+
+.stack_item {
+  /*height: 50px;*/
 }
