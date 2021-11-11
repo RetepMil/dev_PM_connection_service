@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Navigation = () => {
-  const [loggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div className={styles.navigation_container}>
       <div className={styles.login_container}>
@@ -13,7 +13,7 @@ const Navigation = () => {
           <button className={styles.login_btn}>log in</button>
         )}
       </div>
-      <Link to="/">
+      <Link to="/mypage">
         <div className={styles.navigation_my_page_btn}>
           <span className={styles.my_page}>my page</span>
         </div>
