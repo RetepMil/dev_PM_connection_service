@@ -28,7 +28,7 @@ const SPAN = styled.span`
 `;
 
 const printTitle = (title) => {
-  const TITLE_LENGTH = 22;
+  const TITLE_LENGTH = 29;
   if (title.length > TITLE_LENGTH) return title.slice(0, TITLE_LENGTH) + "...";
   else return title;
 };

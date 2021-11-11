@@ -23,36 +23,39 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 2%;
 `;
 
 const ProjectList = () => {
   const [datas, setDatas] = useState([
     {
       image: "1.png",
-      title: "BookItOut: °í·Á´ëÇÐ±³ ÇÐºÎ»ýÀÇ ¿øÈ°ÇÑ Áö½Ä Á¤º¸ ÀÚ·á ÀÌ¿ëÀ» ...",
+      title:
+        "BookItOut: ê³ ë ¤ëŒ€í•™êµ í•™ë¶€ìƒì˜ ì›í™œí•œ ì§€ì‹ ì •ë³´ ìžë£Œ ì´ìš©ì„ ìœ„í•œ ì•±",
     },
     {
       image: "2.png",
-      title: "¸ñ¼Ò¸®·Î ¸¸³ª´Â ´ëÇÐÄ£±¸! ÅëÈ­¸µ",
+      title: "ëª©ì†Œë¦¬ë¡œ ë§Œë‚˜ëŠ” ëŒ€í•™ì¹œêµ¬! í†µí™”ë§",
     },
     {
       image: "3.png",
-      title: "ÇÇµå¹é º¸°ü ÇÃ·§Æû #posTree",
+      title: "í”¼ë“œë°± ë³´ê´€ í”Œëž«í¼ #posTree",
     },
     {
       image: "4.png",
-      title: "PODO. ÇÐ½À ¸ñÀûÀÇ ¿µ»ó ¸ðÀ½ À¥»çÀÌÆ®",
+      title: "PODO. í•™ìŠµ ëª©ì ì˜ ì˜ìƒ ëª¨ìŒ ì›¹ì‚¬ì´íŠ¸",
     },
     {
       image: "5.png",
-      title: "ArtRecipe: ¿¹¼úÀÛÇ°¡¤Àç·áÁ¤º¸ °øÀ¯ ÇÃ·§Æû",
+      title: "ArtRecipe: ì˜ˆìˆ ìž‘í’ˆÂ·ìž¬ë£Œì •ë³´ ê³µìœ  í”Œëž«í¼",
     },
   ]);
 
   const TOTAL_SLIDES = 5;
   const [slide, setSlide] = useState(1);
   const slideRef = useRef();
+  const nextButton = useRef();
+  const prevButton = useRef();
 
   const nextSlide = () => {
     if (slide + 5 > TOTAL_SLIDES) {
@@ -73,11 +76,25 @@ const ProjectList = () => {
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
     slideRef.current.style.transform = `translateX(-${(slide - 1) * 28.2}vw)`;
+
+    if (!prevButton.current.classList.contains("on"))
+      prevButton.current.classList.add("on");
+    if (!nextButton.current.classList.contains("on"))
+      nextButton.current.classList.add("on");
+
+    if (slide === TOTAL_SLIDES - 2) {
+      if (nextButton.current.classList.contains("on"))
+        nextButton.current.classList.remove("on");
+    }
+    if (slide === 1) {
+      if (prevButton.current.classList.contains("on"))
+        prevButton.current.classList.remove("on");
+    }
   }, [slide]);
 
   return (
     <Container>
-      <button id="left-arrow">
+      <button className="arrows left-arrow" ref={prevButton}>
         <Arrow onClick={prevSlide} />
       </button>
       <ListContainer>
@@ -91,7 +108,7 @@ const ProjectList = () => {
           ))}
         </Slider>
       </ListContainer>
-      <button id="right-arrow">
+      <button className="arrows right-arrow" ref={nextButton}>
         <Arrow onClick={nextSlide} />
       </button>
     </Container>

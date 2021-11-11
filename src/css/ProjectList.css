@@ -1,0 +1,20 @@
+.arrows {
+  background-color: transparent;
+  border: none;
+  transition: all 0.1s;
+  opacity: 0.1;
+}
+.left-arrow {
+  transform: rotate(0.5turn);
+}
+.on {
+  opacity: 1;
+}
+.right-arrow.on:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+.left-arrow.on:hover {
+  transform: rotate(0.5turn) scale(1.15);
+  cursor: pointer;
+}

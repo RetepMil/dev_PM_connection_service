@@ -13,7 +13,7 @@ const Navigation = () => {
           <button className={styles.login_btn}>log in</button>
         )}
       </div>
-      <Link to="/">
+      <Link to="/mypage">
         <div className={styles.navigation_my_page_btn}>
           <span className={styles.my_page}>my page</span>
         </div>
