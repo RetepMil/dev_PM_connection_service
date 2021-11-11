@@ -1,22 +1,30 @@
 import styles from "../css/TechStackModal.module.css";
 
-let colorPreset = ["#98C7FF", "#4FA0FF", "#087AFF"];
+let colorPreset = ["#98C7FF", "#4FA0FF", "#087AFF", "#D4D4D4"];
+let dirPreset = [styles.t, styles.b, styles.r, styles.l];
+/* Color and hole direction can later be specified if necessary */
 
-const selectColor = () => {
-  let color = colorPreset[Math.floor(Math.random() * colorPreset.length)];
-  return color;
-};
+const selectColor = () =>
+  colorPreset[Math.floor(Math.random() * colorPreset.length)];
 
 const StackItems = ({ itemNames }) => {
   return (
     <>
       {itemNames.map((itemName) => {
+        let color = selectColor();
+
         return (
-          <div
-            style={{ backgroundColor: selectColor() }}
-            className={styles.stack_item}
-          >
-            {itemName}
+          <div style={{ backgroundColor: color }} className={styles.stack_item}>
+            <span className={styles.stack_item_name}>{itemName}</span>
+            {dirPreset.map((dotDirectionClass) => {
+              let dotColor = Math.random() < 0.5 ? color : "white";
+              return (
+                <div
+                  className={`${dotDirectionClass} ${styles.dot}`}
+                  style={{ backgroundColor: dotColor }}
+                />
+              );
+            })}
           </div>
         );
       })}
