@@ -11,7 +11,11 @@ const AppRouter = () => {
     <Router>
       <Navigation />
       <Routes>
-        <Route exact path="/" element={<Main />}></Route>
+        <Route
+          exact
+          path="/dev_PM_connection_service_FrontEnd"
+          element={<Main />} /*Only used during development*/
+        ></Route>
         <Route exact path="/mypage" element={<MyProjects />}></Route>
         <Route exact path="/findproject" element={<FindProject />}></Route>
         <Route exact path="/findengineer" element={<FindEngineer />}></Route>
