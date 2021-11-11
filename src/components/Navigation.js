@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Navigation = () => {
-  const [loggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div className={styles.navigation_container}>
       <div className={styles.login_container}>
