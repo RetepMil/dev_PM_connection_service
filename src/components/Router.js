@@ -12,8 +12,8 @@ const AppRouter = () => {
       <Navigation />
       <Routes>
         <Route exact path="/" element={<Main />}></Route>
-        <Route exact path="/mypage"></Route>
-        <Route exact path="/findproject" element={<MyProjects />}></Route>
+        <Route exact path="/mypage" element={<MyProjects />}></Route>
+        <Route exact path="/findproject" element={<FindProject />}></Route>
         <Route exact path="/findengineer" element={<FindEngineer />}></Route>
       </Routes>
     </Router>
