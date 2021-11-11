@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "../css/MyProjects.css";
 import ProjectList from "./ProjectList";
 
 const Container = styled.div`

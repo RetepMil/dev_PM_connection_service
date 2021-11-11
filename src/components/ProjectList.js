@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
 import styled from "styled-components";
-import "../css/MyProjects.css";
+import "../css/ProjectList.css";
 import Project from "./Project";
 
 const ListContainer = styled.div`
