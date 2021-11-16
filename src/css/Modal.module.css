@@ -19,7 +19,7 @@
   clear: both;
 }
 
-.tech_stack_title {
+.modal_title {
   position: absolute;
   width: 126px;
   height: 30px;
@@ -115,4 +115,10 @@
 
 .stack_item_name {
   z-index: 1;
+}
+
+.close_button {
+  position: absolute;
+  top: 22px;
+  right: 100.5px;
 }

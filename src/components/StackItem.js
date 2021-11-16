@@ -1,4 +1,4 @@
-import styles from "../css/TechStackModal.module.css";
+import styles from "../css/Modal.module.css";
 
 let colorPreset = ["#98C7FF", "#4FA0FF", "#087AFF", "#D4D4D4"];
 let dirPreset = [styles.t, styles.b, styles.r, styles.l];
@@ -14,7 +14,11 @@ const StackItems = ({ itemNames }) => {
         let color = selectColor();
 
         return (
-          <div style={{ backgroundColor: color }} className={styles.stack_item}>
+          <div
+            style={{ backgroundColor: color }}
+            className={styles.stack_item}
+            key={itemName}
+          >
             <span className={styles.stack_item_name}>{itemName}</span>
             {dirPreset.map((dotDirectionClass) => {
               let dotColor = Math.random() < 0.5 ? color : "white";
@@ -22,6 +26,7 @@ const StackItems = ({ itemNames }) => {
                 <div
                   className={`${dotDirectionClass} ${styles.dot}`}
                   style={{ backgroundColor: dotColor }}
+                  key={dotDirectionClass}
                 />
               );
             })}

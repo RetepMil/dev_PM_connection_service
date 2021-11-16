@@ -1,0 +1,57 @@
+.introduce_container {
+  position: absolute;
+
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 70px;
+
+  top: 150px;
+  width: 884px;
+  height: 548px;
+
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section_title {
+  margin-bottom: 15px;
+  padding-left: 35px;
+
+  border-left: 3px solid #858585;
+  font-size: 24px;
+  line-height: 30px;
+  color: #858585;
+}
+
+.section_content {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.section_content_self_intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.self_introduction_nickname {
+  margin-left: 15px;
+
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  color: #858585;
+}
+
+.self_introduction_content {
+  margin-left: 15px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #858585;
+}

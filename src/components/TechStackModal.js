@@ -1,5 +1,7 @@
-import styles from "../css/TechStackModal.module.css";
+import styles from "../css/Modal.module.css";
 import StackItems from "./StackItem";
+import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
+import { ReactComponent as CloseButton } from "../assets/closeX.svg";
 
 let developStackNames = [
   // later receive data from backend server
@@ -26,10 +28,18 @@ let designStackNames = [
 
 let managerStackNames = ["App Service", "Web Service"];
 
-const TechStackModal = () => {
+const TechStackModal = ({ moveToAnotherModal }) => {
+  const nextModalType = "Introduce";
   return (
-    <div className={styles.modal_container}>
-      <div className={styles.tech_stack_title}>Tech Stack</div>
+    <>
+      <NextArrow
+        style={{ position: "absolute", top: "48px", right: "35%" }}
+        onClick={() => moveToAnotherModal(nextModalType)}
+      />
+      <CloseButton
+        style={{ position: "absolute", top: "22px", right: "41.5px" }}
+      />
+      <div className={styles.modal_title}>Tech Stack</div>
       <div className={styles.stack_container}>
         <div
           className={styles.stack_type}
@@ -57,7 +67,7 @@ const TechStackModal = () => {
         </div>
         <StackItems itemNames={managerStackNames} />
       </div>
-    </div>
+    </>
   );
 };
 

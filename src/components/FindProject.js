@@ -1,10 +1,10 @@
-import TechStackModal from "./TechStackModal";
+import Modal from "./Modal";
 
 const FindProject = () => {
   return (
     <div>
       FindProject!
-      <TechStackModal />
+      <Modal modalTypeInput="TechStack" />
     </div>
   );
 };

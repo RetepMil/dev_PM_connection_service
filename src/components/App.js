@@ -1,6 +1,7 @@
 import styles from "../css/App.module.css";
 import AppRouter from "./Router";
 import "@fontsource/libre-barcode-39-extended-text";
+import "typeface-mplus-1p";
 
 function App() {
   return (
