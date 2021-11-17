@@ -2,7 +2,6 @@ import styles from "../css/Modal.module.css";
 import introduce_styles from "../css/ModalIntroduce.module.scss";
 import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
 import { ReactComponent as PrevArrow } from "../assets/prevArrow.svg";
-import { ReactComponent as CloseButton } from "../assets/closeX.svg";
 import { useState } from "react";
 
 let dummy_data = {
@@ -27,9 +26,6 @@ const IntroduceModal = ({ moveToAnotherModal }) => {
       <NextArrow
         style={{ position: "absolute", top: "48px", right: "35%" }}
         onClick={() => moveToAnotherModal(nextModalType)}
-      />
-      <CloseButton
-        style={{ position: "absolute", top: "22px", right: "41.5px" }}
       />
       <div className={styles.modal_title}>Introduce</div>
       <div className={introduce_styles.introduce_container}>

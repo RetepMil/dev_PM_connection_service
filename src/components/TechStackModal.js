@@ -36,9 +36,6 @@ const TechStackModal = ({ moveToAnotherModal }) => {
         style={{ position: "absolute", top: "48px", right: "35%" }}
         onClick={() => moveToAnotherModal(nextModalType)}
       />
-      <CloseButton
-        style={{ position: "absolute", top: "22px", right: "41.5px" }}
-      />
       <div className={styles.modal_title}>Tech Stack</div>
       <div className={styles.stack_container}>
         <div

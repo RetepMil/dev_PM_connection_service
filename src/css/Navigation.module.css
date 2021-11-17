@@ -1,7 +1,7 @@
 .navigation_container {
   position: absolute;
 
-  width: 1920px;
+  width: 100%;
   height: 65px;
   box-sizing: border-box;
   margin: 0px;
@@ -10,6 +10,7 @@
   position: absolute;
 
   color: #4d4d4d;
+  background-color: #e3e3e3;
 }
 
 .login_container {
@@ -45,36 +46,27 @@
   /* My page button */
 
   position: absolute;
-  width: 1508px;
   height: 65px;
   left: 412px;
   top: 0px;
-
-  background: #e3e3e3;
 }
 
 .navigation_find_project_btn {
   /* Find Project button */
 
   position: absolute;
-  width: 1280px;
   height: 65px;
   left: 640px;
   top: 0px;
-
-  background: #e3e3e3;
 }
 
 .navigation_find_engineer_btn {
   /* Find Engineer button */
 
   position: absolute;
-  width: 1048px;
   height: 65px;
   left: 872px;
   top: 0px;
-
-  background: #e3e3e3;
 }
 
 .divider1 {

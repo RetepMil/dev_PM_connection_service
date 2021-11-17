@@ -25,9 +25,6 @@ const ApplyMessage = ({ moveToAnotherModal }) => {
         style={{ position: "absolute", top: "48px", left: "35%" }}
         onClick={() => moveToAnotherModal(prevModalType)}
       />
-      <CloseButton
-        style={{ position: "absolute", top: "22px", right: "41.5px" }}
-      />
       <div className={styles.modal_title}>Apply</div>
       <form onSubmit={onSubmit}>
         <div className={apply_styles.textarea_container}>

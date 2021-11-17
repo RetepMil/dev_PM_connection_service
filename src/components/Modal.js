@@ -3,10 +3,11 @@ import styles from "../css/Modal.module.css";
 import TechStackModal from "./TechStackModal";
 import IntroduceModal from "./IntroduceModal";
 import ApplyMessage from "./ApplyMessage";
+import { ReactComponent as CloseButton } from "../assets/closeX.svg";
 
 const availableModalTypes = ["TechStack", "Introduce", "ApplyMessage"];
 
-const Modal = ({ modalTypeInput }) => {
+const Modal = ({ modalTypeInput, setIsModalOn }) => {
   const [modalType, setModalType] = useState("");
   useEffect(() => {
     setModalType(modalTypeInput);
@@ -14,6 +15,9 @@ const Modal = ({ modalTypeInput }) => {
 
   const moveToAnotherModal = (modalType) => {
     setModalType(modalType);
+  };
+  const closeModalWindow = () => {
+    setIsModalOn(false);
   };
 
   const chooseModal = (modalType) => {
@@ -29,7 +33,15 @@ const Modal = ({ modalTypeInput }) => {
     }
   };
 
-  return <div className={styles.modal_container}>{chooseModal(modalType)}</div>;
+  return (
+    <div className={styles.modal_container}>
+      {chooseModal(modalType)}
+      <CloseButton
+        onClick={closeModalWindow}
+        style={{ position: "absolute", top: "22px", right: "41.5px" }}
+      />
+    </div>
+  );
 };
 
 export default Modal;
