@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import FindProject from "./FindProject";
 import FindEngineer from "./FindEngineer";
 import MyProjects from "./MyProjects";
+import ProjectInfo from "./ProjectInfo";
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
         <Route exact path="/mypage" element={<MyProjects />}></Route>
         <Route exact path="/findproject" element={<FindProject />}></Route>
         <Route exact path="/findengineer" element={<FindEngineer />}></Route>
+        <Route exact path="/project/:id" element={<ProjectInfo />}></Route>
       </Routes>
     </Router>
   );

@@ -1,7 +1,6 @@
 import styles from "../css/Modal.module.css";
 import StackItems from "./StackItem";
 import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
-import { ReactComponent as CloseButton } from "../assets/closeX.svg";
 
 let developStackNames = [
   // later receive data from backend server

@@ -1,0 +1,152 @@
+.project_info_container {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  margin-top: 65px;
+  padding: 0px;
+  border: 0px;
+}
+
+.go_back_to_my_project_btn {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  /* identical to box height */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #4d4d4d;
+}
+
+.control_menu {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  width: 150px;
+  height: 420px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #c4c4c4;
+
+  div:not(:last-child) {
+    border-bottom: 1px solid #000000;
+  }
+}
+
+.menu_block {
+  height: 33.33%;
+  width: 80%;
+  margin: 0% 10% 0% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Mplus 1p;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.content_container {
+  position: absolute;
+  top: 140px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project_title {
+  margin-top: 0.5em;
+
+  font-family: Mplus 1p;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 53px;
+
+  color: #000000;
+}
+
+.project_recruiting_status_banner {
+  margin-top: 1em;
+  width: 286px;
+  height: 53px;
+
+  border: 1px solid rgba(2, 117, 252, 0.6);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Mplus 1p;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: rgba(2, 117, 252, 0.6);
+
+  box-sizing: border-box;
+}
+
+.project_current_member_container {
+  margin-top: 0.5em;
+  width: 1000px;
+  height: 200px;
+
+  border: 1px solid black;
+}
+
+.project_subtitle {
+  margin-top: 3em;
+  width: 1200px;
+
+  font-family: Mplus 1p;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 53px;
+
+  color: #000000;
+}
+
+.project_brief_introduction {
+  width: 1200px;
+
+  font-family: Mplus 1p;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #111111;
+}
+
+.project_info_content_divider {
+  margin: 10em 0em 10em 0em;
+  width: 375px;
+  border-bottom: 1px solid #858585;
+}
