@@ -1,4 +1,4 @@
-import styles from "../css/Modal.module.css";
+import styles from "../css/Modal.module.scss";
 import introduce_styles from "../css/ModalIntroduce.module.scss";
 import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
 import { ReactComponent as PrevArrow } from "../assets/prevArrow.svg";

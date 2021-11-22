@@ -11,12 +11,10 @@
 
   border-radius: 30px;
   background-color: white;
-}
 
-.modal_container:after {
-  content: "";
-  display: table;
-  clear: both;
+  :last-child {
+    border: none;
+  }
 }
 
 .modal_title {
@@ -50,10 +48,6 @@
   row-gap: 9%;
 
   border-right: 1px solid #000000;
-}
-
-.stack_container:last-child {
-  border: none;
 }
 
 .stack_type {

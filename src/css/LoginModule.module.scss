@@ -1,0 +1,95 @@
+.login_module_container {
+  position: absolute;
+  top: 350px;
+  left: 40px;
+  width: 490px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.id_and_password {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_box {
+  width: 350px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 0px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.login_btn_container {
+  position: static;
+  width: 120px;
+  height: 120px;
+  margin-left: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 25px;
+
+  cursor: pointer;
+
+  color: #ffffff;
+  background: #c4c4c4;
+}
+
+.right_circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  right: -25px;
+
+  border-radius: 50%;
+  z-index: 3;
+
+  background: #c4c4c4;
+}
+
+.bottom_circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+
+  border-radius: 50%;
+  z-index: 3;
+  background-color: #ffdede;
+}
+
+.sign_up_and_forgot_password_container {
+  width: 350px;
+  height: 25px;
+
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: rgba(133, 133, 133, 0.63);
+
+  display: flex;
+  justify-content: space-between;
+
+  :nth-child(1) {
+    cursor: pointer;
+  }
+  :nth-child(2) {
+    cursor: pointer;
+  }
+}

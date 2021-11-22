@@ -1,16 +1,26 @@
-div.main_container {
-  position: absolute;
-
+.big_container {
   width: 100%;
   height: 100%;
+  background-color: #ffdede;
+}
+
+.main_container {
+  position: absolute;
   margin-top: 65px;
   padding: 0px;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 1920px;
+  height: 1015px;
   border: 0px;
+  overflow: hidden;
 
   background-color: #ffdede;
 }
 
-div.puzzle_rectangle {
+.puzzle_rectangle {
   position: absolute;
   width: 744px;
   height: 684px;
@@ -22,7 +32,7 @@ div.puzzle_rectangle {
   transform: rotate(16.34deg);
 }
 
-div.top_circle {
+.top_circle {
   position: absolute;
   width: 340px;
   height: 340px;
@@ -35,7 +45,7 @@ div.top_circle {
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-div.right_circle {
+.right_circle {
   position: absolute;
   width: 340px;
   height: 340px;
@@ -48,7 +58,7 @@ div.right_circle {
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-div.left_circle {
+.left_circle {
   position: absolute;
   width: 340px;
   height: 340px;

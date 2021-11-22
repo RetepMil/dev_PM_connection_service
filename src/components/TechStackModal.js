@@ -1,4 +1,4 @@
-import styles from "../css/Modal.module.css";
+import styles from "../css/Modal.module.scss";
 import StackItems from "./StackItem";
 import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
 

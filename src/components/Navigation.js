@@ -1,4 +1,4 @@
-import styles from "../css/Navigation.module.css";
+import styles from "../css/Navigation.module.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -7,11 +7,13 @@ const Navigation = () => {
   return (
     <div className={styles.navigation_container}>
       <div className={styles.login_container}>
-        {loggedIn ? (
-          <div></div>
-        ) : (
-          <button className={styles.login_btn}>log in</button>
-        )}
+        <Link to="/dev_PM_connection_service_FrontEnd">
+          {loggedIn ? (
+            <div></div>
+          ) : (
+            <button className={styles.login_btn}>log in</button>
+          )}
+        </Link>
       </div>
       <Link to="/mypage">
         <div className={styles.navigation_my_page_btn}>

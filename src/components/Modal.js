@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../css/Modal.module.css";
+import styles from "../css/Modal.module.scss";
 import TechStackModal from "./TechStackModal";
 import IntroduceModal from "./IntroduceModal";
 import ApplyMessage from "./ApplyMessage";
@@ -35,11 +35,11 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
 
   return (
     <div className={styles.modal_container}>
-      {chooseModal(modalType)}
       <CloseButton
         onClick={closeModalWindow}
         style={{ position: "absolute", top: "22px", right: "41.5px" }}
       />
+      {chooseModal(modalType)}
     </div>
   );
 };
