@@ -5,7 +5,6 @@ const Main = () => {
   return (
     <div className={styles.big_container}>
       <div className={styles.main_container}>
-        <LoginModule />
         <div className={styles.puzzle_rectangle}>
           <div className={styles.top_circle} />
           <div className={styles.right_circle} />
