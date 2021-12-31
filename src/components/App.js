@@ -1,5 +1,5 @@
-import styles from "../css/App.module.css";
-import AppRouter from "./Router";
+import styles from "css/App.module.css";
+import AppRouter from "components/Router";
 import "@fontsource/libre-barcode-39-extended-text";
 import "typeface-mplus-1p";
 

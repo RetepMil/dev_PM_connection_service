@@ -1,4 +1,4 @@
-import styles from "../css/Modal.module.scss";
+import styles from "css/Modal.module.scss";
 
 let colorPreset = ["#98C7FF", "#4FA0FF", "#087AFF", "#D4D4D4"];
 let dirPreset = [styles.t, styles.b, styles.r, styles.l];

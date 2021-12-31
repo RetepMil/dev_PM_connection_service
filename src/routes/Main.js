@@ -1,5 +1,5 @@
-import styles from "../css/Main.module.scss";
-import LoginModule from "./LoginModule";
+import styles from "css/Main.module.scss";
+import LoginModule from "components/LoginModule";
 
 const Main = () => {
   return (

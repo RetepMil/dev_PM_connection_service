@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ProjectList from "./ProjectList";
+import ProjectList from "components/ProjectList";
 
 const Container = styled.div`
   margin: auto;

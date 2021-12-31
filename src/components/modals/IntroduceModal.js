@@ -1,7 +1,7 @@
-import styles from "../css/Modal.module.scss";
-import introduce_styles from "../css/ModalIntroduce.module.scss";
-import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
-import { ReactComponent as PrevArrow } from "../assets/prevArrow.svg";
+import styles from "css/Modal.module.scss";
+import introduce_styles from "css/ModalIntroduce.module.scss";
+import { ReactComponent as NextArrow } from "assets/nextArrow.svg";
+import { ReactComponent as PrevArrow } from "assets/prevArrow.svg";
 import { useState } from "react";
 
 let dummy_data = {
@@ -34,6 +34,7 @@ const IntroduceModal = ({ moveToAnotherModal }) => {
           <img
             src={process.env.PUBLIC_URL + `/img/${userData.image}`}
             style={{ width: "200px", height: "200px", float: "left" }}
+            alt="userDataIMG"
           />
           <div className={introduce_styles.section_content_self_intro}>
             <span className={introduce_styles.self_introduction_nickname}>

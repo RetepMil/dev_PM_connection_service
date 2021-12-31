@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import styles from "../css/Modal.module.scss";
-import TechStackModal from "./TechStackModal";
-import IntroduceModal from "./IntroduceModal";
-import ApplyMessage from "./ApplyMessage";
-import { ReactComponent as CloseButton } from "../assets/closeX.svg";
+import styles from "css/Modal.module.scss";
+import TechStackModal from "components/modals/TechStackModal";
+import IntroduceModal from "components/modals/IntroduceModal";
+import ApplyMessage from "components/modals/ApplyMessageModal";
+import { ReactComponent as CloseButton } from "assets/closeX.svg";
 
 const availableModalTypes = ["TechStack", "Introduce", "ApplyMessage"];
 

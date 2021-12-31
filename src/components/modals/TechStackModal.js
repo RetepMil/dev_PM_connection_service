@@ -1,6 +1,6 @@
-import styles from "../css/Modal.module.scss";
-import StackItems from "./StackItem";
-import { ReactComponent as NextArrow } from "../assets/nextArrow.svg";
+import styles from "css/Modal.module.scss";
+import StackItems from "components/StackItem";
+import { ReactComponent as NextArrow } from "assets/nextArrow.svg";
 
 let developStackNames = [
   // later receive data from backend server

@@ -1,4 +1,4 @@
-import styles from "../css/LoginModule.module.scss";
+import styles from "css/LoginModule.module.scss";
 
 const LoginModule = () => {
   const onSubmit = (e) => {};

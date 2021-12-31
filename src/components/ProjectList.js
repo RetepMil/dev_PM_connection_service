@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ReactComponent as Arrow } from "../assets/arrow.svg";
+import { ReactComponent as Arrow } from "assets/arrow.svg";
 import styled from "styled-components";
-import "../css/ProjectList.scss";
-import Project from "./Project";
+import "css/ProjectList.scss";
+import Project from "components/Project";
 
 const ListContainer = styled.div`
   width: 100%;

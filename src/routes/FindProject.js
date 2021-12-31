@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { ReactComponent as SearchBtn } from "../assets/search_btn.svg";
-import styles from "../css/FindProject.module.scss";
-import Modal from "./Modal";
-import ProjectPreview from "./ProjectPreview";
+import { ReactComponent as SearchBtn } from "assets/search_btn.svg";
+import styles from "css/FindProject.module.scss";
+import Modal from "components/Modal";
+import ProjectPreview from "components/ProjectPreview";
 import { Link } from "react-router-dom";
 
 let dummy_data = [

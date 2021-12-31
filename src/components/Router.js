@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Main from "./Main";
-import Navigation from "./Navigation";
-import FindProject from "./FindProject";
-import FindEngineer from "./FindEngineer";
-import MyProjects from "./MyProjects";
-import ProjectInfo from "./ProjectInfo";
+import Main from "routes/Main";
+import Navigation from "components/Navigation";
+import FindProject from "routes/FindProject";
+import FindEngineer from "routes/FindEngineer";
+import MyProjects from "routes/MyProjects";
+import ProjectInfo from "routes/ProjectInfo";
 
 const AppRouter = () => {
   return (

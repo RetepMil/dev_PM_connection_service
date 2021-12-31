@@ -1,6 +1,6 @@
-import styles from "../css/Modal.module.scss";
-import apply_styles from "../css/ModalApply.module.scss";
-import { ReactComponent as PrevArrow } from "../assets/prevArrow.svg";
+import styles from "css/Modal.module.scss";
+import apply_styles from "css/ModalApply.module.scss";
+import { ReactComponent as PrevArrow } from "assets/prevArrow.svg";
 import { useState } from "react";
 
 const ApplyMessage = ({ moveToAnotherModal }) => {
