@@ -4,11 +4,18 @@ import TechStackModal from "components/modals/TechStackModal";
 import IntroduceModal from "components/modals/IntroduceModal";
 import ApplyMessage from "components/modals/ApplyMessageModal";
 import { ReactComponent as CloseButton } from "assets/closeX.svg";
+import SelectEngineerType from "./modals/SelectEngineerTypeModal";
 
-const availableModalTypes = ["TechStack", "Introduce", "ApplyMessage"];
+const availableModalTypes = [
+  "TechStack",
+  "Introduce",
+  "ApplyMessage",
+  "SelectEngineerType",
+];
 
 const Modal = ({ modalTypeInput, setIsModalOn }) => {
   const [modalType, setModalType] = useState("");
+
   useEffect(() => {
     setModalType(modalTypeInput);
   }, []);
@@ -16,7 +23,7 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
   const moveToAnotherModal = (modalType) => {
     setModalType(modalType);
   };
-  const closeModalWindow = () => {
+  const toggleModalWindow = () => {
     setIsModalOn(false);
   };
 
@@ -28,6 +35,8 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
         return <IntroduceModal moveToAnotherModal={moveToAnotherModal} />;
       case "ApplyMessage":
         return <ApplyMessage moveToAnotherModal={moveToAnotherModal} />;
+      case "SelectEngineerType":
+        return <SelectEngineerType moveToAnotherModal={moveToAnotherModal} />;
       default:
         return <div></div>;
     }
@@ -36,7 +45,7 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
   return (
     <div className={styles.modal_container}>
       <CloseButton
-        onClick={closeModalWindow}
+        onClick={toggleModalWindow}
         style={{ position: "absolute", top: "22px", right: "41.5px" }}
       />
       {chooseModal(modalType)}
