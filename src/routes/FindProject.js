@@ -73,13 +73,22 @@ const FindProject = () => {
           <input
             className={styles.search_textbox}
             type="text"
-            placeholder="search"
+            placeholder=" search"
             onChange={onChange}
           />
           <button className={styles.search_btn}>
             <SearchBtn />
           </button>
         </form>
+        <div className={styles.filter_btn_container}>
+          <img
+            height="50px"
+            width="50px"
+            alt="small_puzzle_img"
+            src={process.env.PUBLIC_URL + "/img/FindProject/small_puzzle.png"}
+          ></img>
+          <span>filter</span>
+        </div>
       </div>
       <div className={styles.board_container}>
         <div className={styles.board_subcontainer}>
