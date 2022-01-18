@@ -5,12 +5,14 @@ import IntroduceModal from "components/modals/IntroduceModal";
 import ApplyMessage from "components/modals/ApplyMessageModal";
 import { ReactComponent as CloseButton } from "assets/closeX.svg";
 import SelectEngineerType from "./modals/SelectEngineerTypeModal";
+import FilterModal from "./modals/FilterModal";
 
 const availableModalTypes = [
   "TechStack",
   "Introduce",
   "ApplyMessage",
   "SelectEngineerType",
+  "Filter",
 ];
 
 const Modal = ({ modalTypeInput, setIsModalOn }) => {
@@ -37,6 +39,8 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
         return <ApplyMessage moveToAnotherModal={moveToAnotherModal} />;
       case "SelectEngineerType":
         return <SelectEngineerType moveToAnotherModal={moveToAnotherModal} />;
+      case "Filter":
+        return <FilterModal moveToAnotherModal={moveToAnotherModal} />;
       default:
         return <div></div>;
     }

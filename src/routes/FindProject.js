@@ -55,7 +55,7 @@ let dummy_data = [
 
 const FindProject = () => {
   const [searchText, setSearchText] = useState("");
-  const [isModalOn, setIsModalOn] = useState(true);
+  const [isModalOn, setIsModalOn] = useState(false);
   const onChange = (event) => {
     const {
       target: { value },
@@ -64,6 +64,9 @@ const FindProject = () => {
   };
   const onSubmit = async (event) => {
     event.preventDefault();
+  };
+  const onFilterBtnClick = () => {
+    setIsModalOn(true);
   };
 
   return (
@@ -80,7 +83,7 @@ const FindProject = () => {
             <SearchBtn />
           </button>
         </form>
-        <div className={styles.filter_btn_container}>
+        <div className={styles.filter_btn_container} onClick={onFilterBtnClick}>
           <img
             height="50px"
             width="50px"
@@ -104,7 +107,7 @@ const FindProject = () => {
         </div>
       </div>
       {isModalOn ? (
-        <Modal modalTypeInput="TechStack" setIsModalOn={setIsModalOn} />
+        <Modal modalTypeInput="Filter" setIsModalOn={setIsModalOn} />
       ) : null}
     </>
   );
