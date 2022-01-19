@@ -1,0 +1,33 @@
+.round_button {
+  width: 200px;
+  height: 200px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  text-align: center;
+  line-height: 200px;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+  &.about {
+    background: rgba(2, 117, 252, 0.6);
+    position: absolute;
+    left: 396px;
+    top: 300px;
+  }
+
+  &.our_projects {
+    background: white;
+    position: absolute;
+    left: 796px;
+    top: 173px;
+  }
+
+  &.my_projects {
+    background: white;
+    position: absolute;
+    left: 900px;
+    top: 450px;
+  }
+}

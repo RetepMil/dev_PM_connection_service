@@ -4,7 +4,7 @@ import Main from "routes/Main";
 import Navigation from "components/Navigation";
 import FindProject from "routes/FindProject";
 import FindEngineer from "routes/FindEngineer";
-import MyProjects from "routes/MyProjects";
+import MyPage from "routes/MyPage";
 import ProjectInfo from "routes/ProjectInfo";
 
 const AppRouter = () => {
@@ -17,7 +17,7 @@ const AppRouter = () => {
           path="/dev_PM_connection_service_FrontEnd"
           element={<Main />} /*Only used during development*/
         ></Route>
-        <Route exact path="/mypage" element={<MyProjects />}></Route>
+        <Route exact path="/mypage" element={<MyPage />}></Route>
         <Route exact path="/findproject" element={<FindProject />}></Route>
         <Route exact path="/findengineer" element={<FindEngineer />}></Route>
         <Route exact path="/project/:id" element={<ProjectInfo />}></Route>
