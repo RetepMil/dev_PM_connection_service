@@ -36,7 +36,10 @@ const printTitle = (title) => {
 const Project = ({ image, title }) => {
   return (
     <DIV>
-      <IMG alt="no" src={process.env.PUBLIC_URL + `/img/${image}`} />
+      <IMG
+        alt="no"
+        src={process.env.PUBLIC_URL + `/img/ProjectList/${image}`}
+      />
       <SPAN>{printTitle(title)}</SPAN>
     </DIV>
   );

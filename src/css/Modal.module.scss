@@ -1,12 +1,10 @@
 .modal_container {
-  position: absolute;
-  width: 1024px;
-  height: 768px;
-  overflow: hidden;
-  display: flex;
-
-  top: 60%;
+  position: fixed;
   left: 50%;
+  top: 50%;
+  width: 53.3%;
+  height: 71.1%;
+  display: flex;
   transform: translate(-50%, -50%);
 
   border-radius: 30px;
@@ -29,7 +27,7 @@
   font-family: Lexend Deca;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1em;
   line-height: 30px;
   /* identical to box height */
 

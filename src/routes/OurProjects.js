@@ -19,7 +19,7 @@ const MyProjects = () => {
           color: "#4D4D4D",
         }}
       >
-        |&nbsp;&nbsp;&nbsp;My project
+        |&nbsp;&nbsp;&nbsp;Our project
       </div>
       <ProjectList />
     </Container>

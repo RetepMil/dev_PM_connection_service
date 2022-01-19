@@ -6,10 +6,6 @@
   margin-bottom: 70px;
 
   top: 150px;
-  width: 884px;
-  height: 548px;
-
-  overflow-y: scroll;
 
   display: flex;
   flex-direction: column;
@@ -28,6 +24,8 @@
 .section_content {
   margin-bottom: 15px;
   display: flex;
+  font-size: 24px;
+  color: #858585;
 }
 
 .section_content_self_intro {
@@ -45,6 +43,14 @@
   color: #858585;
 }
 
+.bio {
+  margin-left: 15px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  color: #858585;
+}
+
 .self_introduction_content {
   margin-left: 15px;
 
@@ -52,6 +58,7 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 36px;
+  white-space: pre-wrap;
 
   color: #858585;
 }
