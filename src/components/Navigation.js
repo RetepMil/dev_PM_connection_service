@@ -2,6 +2,8 @@ import styles from "css/Navigation.module.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Modal from "./Modal";
+import NotificationIcon from "./notification_bar/NotificationIcon";
+import PuzzleLogo from "./notification_bar/PuzzleLogo";
 
 const Navigation = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -47,15 +49,11 @@ const Navigation = () => {
         >
           <span className={styles.find_engineer}>find engineer</span>
         </div>
-        <div className={styles.logo_container}>
-          <img
-            height="50px"
-            width="50px"
-            alt="nav_puzzle_logo"
-            src={process.env.PUBLIC_URL + "/img/Navigation/nav_puzzle_logo.png"}
-          />
-          <span>project</span>
-        </div>
+        {window.location.pathname === "/dev_PM_connection_service_FrontEnd" ? (
+          <NotificationIcon />
+        ) : (
+          <PuzzleLogo />
+        )}
       </div>
     </>
   );
