@@ -46,6 +46,8 @@
 }
 
 .right_circle {
+  display: flex;
+  align-items: center;
   position: absolute;
   width: 340px;
   height: 340px;
@@ -56,6 +58,19 @@
 
   background: #ffffff;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-16.34deg);
+
+  & > .text {
+    margin: auto;
+
+    font-family: Open Sans;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 72px;
+    text-align: center;
+    line-height: 98px;
+    color: #4d4d4d;
+  }
 }
 
 .left_circle {

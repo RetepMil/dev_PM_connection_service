@@ -8,6 +8,7 @@ import MyPage from "routes/MyPage";
 import ProjectInfo from "routes/ProjectInfo";
 import MyProjects from "routes/MyProjects";
 import OurProjects from "routes/OurProjects";
+import StartProject from "routes/StartProject";
 
 const AppRouter = () => {
   return (
@@ -29,6 +30,7 @@ const AppRouter = () => {
         <Route exact path="/findproject" element={<FindProject />}></Route>
         <Route exact path="/findengineer" element={<FindEngineer />}></Route>
         <Route exact path="/project/:id" element={<ProjectInfo />}></Route>
+        <Route exact path="/startproject" element={<StartProject />}></Route>
       </Routes>
     </Router>
   );
