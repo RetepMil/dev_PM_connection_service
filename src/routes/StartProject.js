@@ -5,13 +5,14 @@ const StartProject = () => {
     <>
       <Puzzle
         width="160px"
-        height="65px"
+        height="100px"
+        top="150px"
+        left="100px"
         color="#98C7FF"
-        fontsize="15px"
-        top="0"
-        bottom="1"
-        right="2"
-        left="0"
+        t="0"
+        b="1"
+        l="1"
+        r="2"
       >
         JavaScript
       </Puzzle>
