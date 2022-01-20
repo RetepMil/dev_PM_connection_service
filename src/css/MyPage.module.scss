@@ -1,34 +1,34 @@
 .round_button {
-  width: 17vw;
-  height: 17vw;
+  width: 340px;
+  height: 340px;
   border: none;
   border-radius: 200px;
   outline: none;
   text-align: center;
-  line-height: 17vw;
+  line-height: 320px;
   font-size: 2em;
   cursor: pointer;
 
   &.about {
     background: rgba(2, 117, 252, 0.6);
-    position: fixed;
-    left: 20.625%;
-    top: 37.1%;
+    position: absolute;
+    left: 369px;
+    top: 401px;
   }
 
   &.our_projects {
     background: white;
-    position: fixed;
-    left: 46.7%;
-    top: 16.1%;
+    position: absolute;
+    left: 896px;
+    top: 173px;
     box-shadow: inset 0px 4px 3px rgb(175, 173, 173);
   }
 
   &.my_projects {
     background: white;
-    position: fixed;
-    left: 58.125%;
-    top: 50.46%;
+    position: absolute;
+    left: 1116px;
+    top: 545px;
     box-shadow: inset 0px 4px 3px rgb(175, 173, 173);
   }
 }
