@@ -17,7 +17,7 @@ const MyPage = () => {
   };
 
   return (
-    <>
+    <div className={styles.big_container}>
       <BackgroundStyle />
       <div
         className={`${styles.round_button} ${styles.about}`}
@@ -40,7 +40,7 @@ const MyPage = () => {
       {isModalOn ? (
         <Modal modalTypeInput="TechStack" setIsModalOn={setIsModalOn} />
       ) : null}
-    </>
+    </div>
   );
 };
 
