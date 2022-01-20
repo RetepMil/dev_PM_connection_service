@@ -1,6 +1,7 @@
 import styles from "css/Main.module.scss";
 import LoginModule from "components/LoginModule";
 import { Link } from "react-router-dom";
+import MemberExclusionModal from "components/modals/MemberExclusionModal";
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
           We make your imagination a reality.
         </div>
       </div>
+      <MemberExclusionModal />
     </div>
   );
 };
