@@ -91,6 +91,26 @@
   z-index: 10;
 }
 
+.logo_container {
+  height: 65px;
+
+  position: absolute;
+  right: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: #111111;
+}
+
 span.my_page {
   position: absolute;
   width: 160px;
