@@ -8,18 +8,21 @@ import PuzzleLogo from "./notification_bar/PuzzleLogo";
 const Navigation = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [isModalOn, setIsModalOn] = useState(false);
+  const [modalType, setModalType] = useState("");
 
-  const showModal = () => {
+  const onFindEngineerBtnClick = () => {
+    setModalType("SelectEngineerType");
+    setIsModalOn(true);
+  };
+  const onNotificationBtnClick = () => {
+    setModalType("Notice");
     setIsModalOn(true);
   };
 
   return (
     <>
       {isModalOn ? (
-        <Modal
-          modalTypeInput="SelectEngineerType"
-          setIsModalOn={setIsModalOn}
-        />
+        <Modal modalTypeInput={modalType} setIsModalOn={setIsModalOn} />
       ) : null}
       <div className={styles.navigation_container}>
         <div className={styles.login_container}>
@@ -45,12 +48,12 @@ const Navigation = () => {
         <div className={styles.divider2}></div>
         <div
           className={styles.navigation_find_engineer_btn}
-          onClick={showModal}
+          onClick={onFindEngineerBtnClick}
         >
           <span className={styles.find_engineer}>find engineer</span>
         </div>
         {window.location.pathname === "/dev_PM_connection_service_FrontEnd" ? (
-          <NotificationIcon />
+          <NotificationIcon onNotificationBtnClick={onNotificationBtnClick} />
         ) : (
           <PuzzleLogo />
         )}
