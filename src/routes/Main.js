@@ -23,7 +23,6 @@ const Main = () => {
           We make your imagination a reality.
         </div>
       </div>
-      <MemberExclusionModal />
     </div>
   );
 };
