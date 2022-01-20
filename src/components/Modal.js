@@ -38,7 +38,12 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
       case "ApplyMessage":
         return <ApplyMessage moveToAnotherModal={moveToAnotherModal} />;
       case "SelectEngineerType":
-        return <SelectEngineerType moveToAnotherModal={moveToAnotherModal} />;
+        return (
+          <SelectEngineerType
+            moveToAnotherModal={moveToAnotherModal}
+            toggleModalWindow={toggleModalWindow}
+          />
+        );
       case "Filter":
         return <FilterModal moveToAnotherModal={moveToAnotherModal} />;
       default:

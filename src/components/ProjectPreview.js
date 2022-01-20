@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import styles from "css/FindProject.module.scss";
+import styles from "css/FindPageTemplate.module.scss";
 
 const Container = styled.div`
   width: 100%;
