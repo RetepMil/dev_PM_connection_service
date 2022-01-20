@@ -1,5 +1,6 @@
-import styles from 'css/Main.module.scss';
-import LoginModule from 'components/LoginModule';
+import styles from "css/Main.module.scss";
+import LoginModule from "components/LoginModule";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -8,7 +9,11 @@ const Main = () => {
         <LoginModule />
         <div className={styles.puzzle_rectangle}>
           <div className={styles.top_circle} />
-          <div className={styles.right_circle} />
+          <Link to="/startproject" className={styles.right_circle}>
+            <div className={styles.text}>
+              Start<br></br>Project
+            </div>
+          </Link>
           <div className={styles.left_circle} />
         </div>
         <div className={styles.logo}>project</div>
