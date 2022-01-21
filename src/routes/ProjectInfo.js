@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "../css/ProjectInfo.module.scss";
 import { ReactComponent as PrevArrowMyProject } from "../assets/prevArrowMyProject.svg";
 import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
+import MemberPuzzleFactory from "components/project_info/MemberPuzzleFactory";
 
 //Temporary setting
 let userID = "lkslyj2";
@@ -14,10 +16,38 @@ let projectData = {
     "posTree는 언제나 프로젝트와 함께합니다. 현재 진행 중인 Devkor hackthon을 포함한 대부분의 프로젝트는 웹에서 이뤄집니다. 따라서 웹사이트를 통해 posTree를 구현하였습니다. 또한 프로젝트 하위의 팀, 그리고 팀 간의 피드백이라는 다소 복잡한 구조를 forest와 tree , 그리고 post를 전달하는 messenger 개념을 적용하여 보다 직관적으로 구조를 이해하도록 하였습니다. 이러한 개념을 그래픽화하여 프로그램에 적용하여 유저가 보다 쉽게 구조를 이해하고 사용할 수 있도록 하였습니다.",
   content: "<div>get data from server</div>",
 };
+let participant = [
+  {
+    name: "나노로봇",
+    role: "PM",
+    isInitiater: true,
+  },
+  {
+    name: "코딩하는 호랑이",
+    role: "Designer",
+    isInitiater: false,
+  },
+  {
+    name: "공모전시러",
+    role: "FrontEnd",
+    isInitiater: true,
+  },
+  {
+    name: "박카스100",
+    role: "FrontEnd",
+    isInitiater: false,
+  },
+  {
+    name: "RetepMil",
+    role: "BackEnd",
+    isInitiater: false,
+  },
+];
 
 const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
   const [isAuthor, setIsAuthor] = useState(false);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsAuthor(userID === loginUserID);
@@ -41,7 +71,10 @@ const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
           </div>
         </div>
       ) : null}
-      <div className={styles.go_back_to_my_project_btn}>
+      <div
+        className={styles.go_back_to_my_project_btn}
+        onClick={() => navigate(-1)}
+      >
         <PrevArrowMyProject style={{ marginRight: "25px" }} />
         <span>My Project</span>
       </div>
@@ -60,7 +93,7 @@ const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
           {projectData.status ? "Still Recruiting" : "Recruiting Ended"}
         </div>
         <div className={styles.project_current_member_container}>
-          Member container
+          <MemberPuzzleFactory data={participant} />
         </div>
         <div className={styles.project_subtitle}>{projectData.subtitle}</div>
         <div className={styles.project_brief_introduction}>

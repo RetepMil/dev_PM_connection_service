@@ -115,9 +115,37 @@
 .project_current_member_container {
   margin-top: 0.5em;
   width: 1000px;
+  //height: 200px;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.member_puzzle_container {
+  width: 200px;
   height: 200px;
 
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Mplus 1p";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 27px;
+
+  color: #000000;
+}
+
+.member_role {
+  font-family: "Mplus 1p";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+
+  color: #000000;
 }
 
 .project_subtitle {

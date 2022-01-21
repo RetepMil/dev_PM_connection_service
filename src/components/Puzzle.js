@@ -54,7 +54,6 @@ const DIV = styled.div`
   left: ${(props) => props.left};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  border-radius: 0.5em;
   background-color: ${(props) => props.color};
   font-size: calc(${(props) => props.width} * 0.14);
 `;
