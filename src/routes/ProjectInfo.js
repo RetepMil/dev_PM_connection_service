@@ -91,6 +91,30 @@ const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
         </div>
         <div className={styles.project_recruiting_status_banner}>
           {projectData.status ? "Still Recruiting" : "Recruiting Ended"}
+          <div
+            className={styles.status_banner_circles}
+            style={{
+              backgroundColor: "rgba(2, 117, 252, 0.6)",
+              top: "-8px",
+              right: "-37px",
+            }}
+          />
+          <div
+            className={styles.status_banner_circles}
+            style={{
+              backgroundColor: "rgba(2, 117, 252, 0.6)",
+              top: "8px",
+              left: "-25px",
+            }}
+          />
+          <div
+            className={styles.status_banner_circles}
+            style={{
+              backgroundColor: "rgba(255, 167, 167, 0.47)",
+              top: "-15px",
+              left: "-38px",
+            }}
+          />
         </div>
         <div className={styles.project_current_member_container}>
           <MemberPuzzleFactory data={participant} />

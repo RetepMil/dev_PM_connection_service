@@ -90,6 +90,7 @@
 
 .project_recruiting_status_banner {
   margin-top: 1em;
+  margin-bottom: 0.4em;
   width: 286px;
   height: 53px;
 
@@ -110,6 +111,15 @@
   color: rgba(2, 117, 252, 0.6);
 
   box-sizing: border-box;
+}
+
+.status_banner_circles {
+  height: 60px;
+  width: 60px;
+
+  position: absolute;
+
+  border-radius: 50%;
 }
 
 .project_current_member_container {
