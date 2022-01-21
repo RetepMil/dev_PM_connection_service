@@ -7,6 +7,8 @@ import { ReactComponent as CloseButton } from "assets/closeX.svg";
 import SelectEngineerType from "./modals/SelectEngineerTypeModal";
 import FilterModal from "./modals/FilterModal";
 import NoticeModal from "./modals/NoticeModal";
+import ParticipantStatus from "./modals/ParticipantStatus";
+import ApplicantCheck from "./modals/ApplicantCheck";
 
 const availableModalTypes = [
   "TechStack",
@@ -15,6 +17,8 @@ const availableModalTypes = [
   "SelectEngineerType",
   "Filter",
   "Notice",
+  "ParticipantStatus",
+  "ApplicantCheck",
 ];
 
 const Modal = ({ modalTypeInput, setIsModalOn }) => {
@@ -50,6 +54,10 @@ const Modal = ({ modalTypeInput, setIsModalOn }) => {
         return <FilterModal />;
       case "Notice":
         return <NoticeModal />;
+      case "ParticipantStatus":
+        return <ParticipantStatus />;
+      case "ApplicantCheck":
+        return <ApplicantCheck />;
       default:
         return null;
     }

@@ -4,6 +4,7 @@ import { ReactComponent as PrevArrowMyProject } from "../assets/prevArrowMyProje
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import MemberPuzzleFactory from "components/project_info/MemberPuzzleFactory";
+import Modal from "components/Modal";
 
 //Temporary setting
 let userID = "lkslyj2";
@@ -47,6 +48,8 @@ let participant = [
 const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
   const [isAuthor, setIsAuthor] = useState(false);
   const [editMode, setEditMode] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalType, setModalType] = useState("");
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -55,87 +58,113 @@ const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
     //projectData = axios.get(projectID)
   }, []);
 
+  const onParticipantStatusClick = () => {
+    setModalType("ParticipantStatus");
+    setShowModal(true);
+  };
+  const onApplicantCheckClick = () => {
+    setModalType("ApplicantCheck");
+    setShowModal(true);
+  };
+
   return (
-    <div className={styles.project_info_container}>
-      {isAuthor ? (
-        <div className={styles.control_menu} style={{ cursor: "pointer" }}>
-          <div className={styles.menu_block}>수정</div>
-          <div className={styles.menu_block}>
-            지원자
-            <br />
-            현황
-          </div>
-          <div className={styles.menu_block}>
-            신청
-            <br />
-            확인
-          </div>
-        </div>
+    <>
+      {showModal ? (
+        <Modal modalTypeInput={modalType} setIsModalOn={setShowModal} />
       ) : null}
-      <div
-        className={styles.go_back_to_my_project_btn}
-        onClick={() => navigate(-1)}
-      >
-        <PrevArrowMyProject style={{ marginRight: "25px" }} />
-        <span>My Project</span>
+      <div className={styles.project_info_container}>
+        {isAuthor ? (
+          <div className={styles.control_menu}>
+            <div
+              className={styles.menu_block}
+              onClick={() => setEditMode(true)}
+            >
+              수정
+            </div>
+            <div
+              className={styles.menu_block}
+              onClick={onParticipantStatusClick}
+            >
+              지원자
+              <br />
+              현황
+            </div>
+            <div className={styles.menu_block} onClick={onApplicantCheckClick}>
+              신청
+              <br />
+              확인
+            </div>
+          </div>
+        ) : null}
+        <div
+          className={styles.go_back_to_my_project_btn}
+          onClick={() => navigate(-1)}
+        >
+          <PrevArrowMyProject style={{ marginRight: "25px" }} />
+          <span>My Project</span>
+        </div>
+        <div className={styles.content_container}>
+          <img
+            width="800px"
+            height="500px"
+            alt="project_img"
+            src={process.env.PUBLIC_URL + `/img/ProjectInfo/${"1.png"}`}
+          />
+          <div className={styles.project_title}>
+            {id}
+            {projectData.title}
+          </div>
+          <div className={styles.project_recruiting_status_banner}>
+            {projectData.status ? "Still Recruiting" : "Recruiting Ended"}
+            <div
+              className={styles.status_banner_circles}
+              style={{
+                backgroundColor: "rgba(2, 117, 252, 0.6)",
+                top: "-8px",
+                right: "-37px",
+              }}
+            />
+            <div
+              className={styles.status_banner_circles}
+              style={{
+                backgroundColor: "rgba(2, 117, 252, 0.6)",
+                top: "8px",
+                left: "-25px",
+              }}
+            />
+            <div
+              className={styles.status_banner_circles}
+              style={{
+                backgroundColor: "rgba(255, 167, 167, 0.47)",
+                top: "-15px",
+                left: "-38px",
+              }}
+            />
+          </div>
+          <div className={styles.project_current_member_container}>
+            <MemberPuzzleFactory data={participant} />
+          </div>
+          <div className={styles.project_subtitle}>{projectData.subtitle}</div>
+          <div className={styles.project_brief_introduction}>
+            {projectData.brief_introduction}
+          </div>
+          <div className={styles.project_info_content_divider}></div>
+          <div className={styles.project_content}>{projectData.content}</div>
+          {editMode ? (
+            <div className={styles.save_btn} onClick={() => setEditMode(false)}>
+              SAVE
+            </div>
+          ) : null}
+          <div className={styles.footer}>
+            <span>Updates</span>
+            <span>About</span>
+            <span>Terms</span>
+            <span>Privacy</span>
+            <span>Site Notice</span>
+          </div>
+        </div>
       </div>
-      <div className={styles.content_container}>
-        <img
-          width="800px"
-          height="500px"
-          alt="project_img"
-          src={process.env.PUBLIC_URL + `/img/ProjectInfo/${"1.png"}`}
-        />
-        <div className={styles.project_title}>
-          {id}
-          {projectData.title}
-        </div>
-        <div className={styles.project_recruiting_status_banner}>
-          {projectData.status ? "Still Recruiting" : "Recruiting Ended"}
-          <div
-            className={styles.status_banner_circles}
-            style={{
-              backgroundColor: "rgba(2, 117, 252, 0.6)",
-              top: "-8px",
-              right: "-37px",
-            }}
-          />
-          <div
-            className={styles.status_banner_circles}
-            style={{
-              backgroundColor: "rgba(2, 117, 252, 0.6)",
-              top: "8px",
-              left: "-25px",
-            }}
-          />
-          <div
-            className={styles.status_banner_circles}
-            style={{
-              backgroundColor: "rgba(255, 167, 167, 0.47)",
-              top: "-15px",
-              left: "-38px",
-            }}
-          />
-        </div>
-        <div className={styles.project_current_member_container}>
-          <MemberPuzzleFactory data={participant} />
-        </div>
-        <div className={styles.project_subtitle}>{projectData.subtitle}</div>
-        <div className={styles.project_brief_introduction}>
-          {projectData.brief_introduction}
-        </div>
-        <div className={styles.project_info_content_divider}></div>
-        <div className={styles.project_content}>{projectData.content}</div>
-        {editMode ? <div className={styles.save_btn}>SAVE</div> : null}
-        <div className={styles.footer}>
-          <span>Updates</span>
-          <span>About</span>
-          <span>Terms</span>
-          <span>Privacy</span>
-          <span>Site Notice</span>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
