@@ -46,6 +46,7 @@ let participant = [
 
 const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
   const [isAuthor, setIsAuthor] = useState(false);
+  const [editMode, setEditMode] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -57,7 +58,7 @@ const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
   return (
     <div className={styles.project_info_container}>
       {isAuthor ? (
-        <div className={styles.control_menu}>
+        <div className={styles.control_menu} style={{ cursor: "pointer" }}>
           <div className={styles.menu_block}>수정</div>
           <div className={styles.menu_block}>
             지원자
@@ -125,6 +126,14 @@ const ProjectInfo = ({ projectID /*, userID , loginUserID*/ }) => {
         </div>
         <div className={styles.project_info_content_divider}></div>
         <div className={styles.project_content}>{projectData.content}</div>
+        {editMode ? <div className={styles.save_btn}>SAVE</div> : null}
+        <div className={styles.footer}>
+          <span>Updates</span>
+          <span>About</span>
+          <span>Terms</span>
+          <span>Privacy</span>
+          <span>Site Notice</span>
+        </div>
       </div>
     </div>
   );
