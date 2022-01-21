@@ -9,7 +9,11 @@ const SelectEngineerType = ({ toggleModalWindow }) => {
       <div className={styles.btn_container}>
         {/* Developer 버튼 ▼ */}
         <Link to="/findengineer/developer">
-          <div className={styles.puzzle_body} onClick={toggleModalWindow}>
+          <div
+            className={styles.puzzle_body}
+            onClick={toggleModalWindow}
+            style={{ marginLeft: "0px" }}
+          >
             <span className={styles.puzzle_type}>Developer</span>
             <div
               className={classNames(styles.puzzle_circles, styles.top_circle)}
